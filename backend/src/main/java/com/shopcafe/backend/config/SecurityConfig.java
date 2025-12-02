@@ -64,7 +64,6 @@ public class SecurityConfig {
                 )
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
 
-        // Cho phép load ảnh tĩnh hoặc truy cập từ iframe
         http.headers(headers -> headers.frameOptions(frame -> frame.disable()));
 
         return http.build();
@@ -74,10 +73,10 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
 
-        // 🌍 Cho phép frontend gọi từ cả localhost và EC2 public IP
         config.setAllowedOrigins(List.of(
                 "http://localhost:3030",
-                "http://localhost:5173"
+                "http://localhost:5173",
+                "http://35.175.191.40"  // 🔥 Thêm EC2 để frontend gọi API
         ));
 
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
