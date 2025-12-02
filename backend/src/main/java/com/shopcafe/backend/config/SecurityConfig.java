@@ -76,12 +76,8 @@ public class SecurityConfig {
 
         // 🌍 Cho phép frontend gọi từ cả localhost và EC2 public IP
         config.setAllowedOrigins(List.of(
-                "http://localhost:5173",
-                "http://localhost:5174",
-                "http://localhost:5175",
-                "http://localhost:5176",
-                "http://34.207.243.54",
-                "http://34.207.243.54:80"
+                "http://localhost:3030",
+                "http://localhost:5173"
         ));
 
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));

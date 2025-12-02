@@ -3,7 +3,7 @@ services:
     image: ${DOCKERHUB_USERNAME}/shopcafe-devops-backend:latest
     container_name: shopcafe-backend
     ports:
-      - "8080:8080"
+      - "8000:8000"
     environment:
       - SPRING_DATA_MONGODB_URI=${MONGO_URI}
       - SERVER_PORT=8080

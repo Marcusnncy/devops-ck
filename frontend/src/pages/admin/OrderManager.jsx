@@ -974,8 +974,8 @@ import api from "../../api/axiosClient";
 
 // ===== CẤU HÌNH NGÂN HÀNG MB BANK =====
 const BANK_CODE = "MB";
-const ACCOUNT_NO = "0342867097";
-const ACCOUNT_NAME = "NGUYEN THI MINH NGUYET";
+const ACCOUNT_NO = "0972116762";
+const ACCOUNT_NAME = "NGUYEN TRUNG KY";
 
 export default function OrderManager() {
     const [orders, setOrders] = useState([]);
